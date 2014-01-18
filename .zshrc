@@ -97,8 +97,11 @@ alias ....='cd ../../../'
 alias p='pwd'
 
 # Mozilla Aliases
-alias mig='make install-gaia APP= '
+alias mig='make install-gaia '
 alias mrg='make reset-gaia'
+alias migasys='mig APP=system'
+alias migasysl='mig APP=system && adb logcat | grep system'
+alias migaseal='mig APP=search && adb logcat | grep search'
 alias gaiaff="/Applications/FirefoxNightly.app/Contents/MacOS/firefox -profile ~/workspace/gaia/profile-debug"
 
 
