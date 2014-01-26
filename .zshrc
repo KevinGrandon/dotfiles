@@ -89,6 +89,7 @@ alias gphom='git push origin master'
 alias gplu='git pull upstream '
 alias gplum='git pull upstream master'
 alias gr='git rebase '
+alias grc='git rebase --continue '
 alias gri='git rebase -i '
 alias grm='git rebase -i master'
 
@@ -97,11 +98,20 @@ alias ....='cd ../../../'
 alias p='pwd'
 
 # Mozilla Aliases
+alias gutest='./bin/gaia-test'
+alias gitest='./bin/gaia-marionette'
 alias mig='make install-gaia '
 alias mrg='make reset-gaia'
+alias migahom='mig APP=homescreen'
+alias migahoml='mig APP=homescreen && adb logcat | grep homescreen'
 alias migasys='mig APP=system'
 alias migasysl='mig APP=system && adb logcat | grep system'
+alias migasea='mig APP=search'
 alias migaseal='mig APP=search && adb logcat | grep search'
+alias migaset='mig APP=settings'
+alias migasetl='mig APP=settings && adb logcat | grep settings'
+alias migasms='mig APP=sms'
+alias migasmsl='mig APP=sms && adb logcat | grep sms'
 alias gaiaff="/Applications/FirefoxNightly.app/Contents/MacOS/firefox -profile ~/workspace/gaia/profile-debug"
 
 
