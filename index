@@ -1,0 +1,5 @@
+# Include Files
+ROOT=~/workspace/dotfiles
+. $ROOT/aliases
+. $ROOT/config
+. $ROOT/prompt
