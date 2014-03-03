@@ -47,6 +47,7 @@ alias gs='        git status '
 alias gw='        git show '
 
 # Programs
+alias am='        ~/workspace/dotfiles/atom'
 alias sub='       /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
 alias subaliases='sub ~/workspace/dotfiles/aliases'
 

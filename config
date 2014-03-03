@@ -2,3 +2,6 @@
 git config --global push.default current
 git config --global user.name "Kevin Grandon"
 git config --global user.email "kevingrandon@yahoo.com"
+
+# Permissions
+chmod 755 ./atom
