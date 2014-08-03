@@ -73,6 +73,9 @@ alias gutest='    ./bin/gaia-test'
 gitest() {
 	TEST_FILES="$1" ./bin/gaia-marionette
 }
+gitestv() {
+	TEST_FILES="$1" ./bin/gaia-marionette --verbose
+}
 alias al="        adb logcat"
 alias ala="       adb logcat | ag -i "
 alias ab2g="      adb shell stop b2g && adb shell start b2g"
@@ -87,6 +90,8 @@ alias migacam='   mig APP=camera'
 alias migacaml='  migacam && adb logcat | grep camera.gaia'
 alias migaclo='   mig APP=clock'
 alias migaclol='  migaclo && adb logcat | grep clock.gaia'
+alias migacol='   mig APP=collection'
+alias migacoll='  migacol && adb logcat | grep collection.gaia'
 alias migacom='   mig APP=communications'
 alias migacoml='  migacom && adb logcat | grep communications.gaia'
 alias migacos='   mig APP=costcontrol'
@@ -113,8 +118,8 @@ alias migasms='   mig APP=sms'
 alias migasmsl='  migasms && adb logcat | grep sms.gaia'
 alias migatem='   mig APP=template'
 alias migateml='  migatem && adb logcat | grep template.gaia'
-alias migaver='   mig APP=home2'
-alias migaverl='  migaver && adb logcat | grep home2.gaia'
+alias migaver='   mig APP=verticalhome'
+alias migaverl='  migaver && adb logcat | grep verticalhome.gaia'
 alias migavid='   mig APP=video'
 alias migavidl='  migavid && adb logcat | grep video.gaia'
 alias migawal='   mig APP=wallpaper'
