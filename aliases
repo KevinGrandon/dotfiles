@@ -80,7 +80,7 @@ alias al="        adb logcat"
 alias ala="       adb logcat | ag -i "
 alias ab2g="      adb shell stop b2g && adb shell start b2g"
 alias mig='       make install-gaia '
-alias mrg='       make reset-gaia'
+alias mrg='       DEVICE_DEBUG=1 make reset-gaia'
 alias mrgp='      PRODUCTION=1 make reset-gaia'
 alias migacal='   mig APP=calendar'
 alias migacall='  migacal && adb logcat | grep Calendar'
