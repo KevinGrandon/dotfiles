@@ -68,7 +68,7 @@ alias spoofmac="sudo ifconfig en0 ether $(openssl rand -hex 6 | sed 's/\(..\)/\1
 
 # Mozilla Aliases
 alias gaia="      cd ~/workspace/gaia"
-alias gaiaff="    /Applications/FirefoxNightly.app/Contents/MacOS/firefox -profile ~/workspace/gaia/profile-debug"
+alias gaiaff="    ~/Desktop/mulet.app/Contents/MacOS/firefox -profile ~/workspace/gaia/profile-debug"
 alias gutest='    ./bin/gaia-test -d'
 gitest() {
 	TEST_FILES="$1" ./bin/gaia-marionette
@@ -125,4 +125,4 @@ alias migavidl='  migavid && adb logcat | grep Video'
 alias migawal='   mig APP=wallpaper'
 alias migawall='  migawal && adb logcat | grep wallpaper.gaia'
 alias tryall='    git push-to-try -t ../hg-mozilla-central -b do -p all -u all -t none'
-alias try='       git push-to-try -t ../hg-mozilla-central -b o -p linux32_gecko,linux64_gecko -u marionette-webapi,gaia-build,gaia-build-unit,gaia-linter,gaia-unit,gaia-ui-test,gaia-integration,gaia-js-integration -t none'
+alias try='       git push-to-try -t ../hg-mozilla-central -b o -p linux64_gecko -u gaia-build,gaia-build-unit,gaia-unit,gaia-ui-test,gaia-integration,gaia-js-integration -t none'
