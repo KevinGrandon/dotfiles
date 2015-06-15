@@ -67,6 +67,7 @@ alias spoofmac="sudo ifconfig en0 ether $(openssl rand -hex 6 | sed 's/\(..\)/\1
 
 
 # Mozilla Aliases
+alias browserhtml="/Users/kevin/workspace/gecko-dev/obj-b2gdesktop/dist/B2G.app/Contents/MacOS/b2g --start-manifest http://localhost:8000/manifest.webapp"
 alias gaia="      cd ~/workspace/gaia"
 alias gaiaff="    ~/Desktop/mulet.app/Contents/MacOS/firefox -profile ~/workspace/gaia/profile-debug"
 alias gutest='    ./bin/gaia-test -d'
@@ -99,7 +100,7 @@ alias migaemal='  migaema && adb logcat | grep E-Mail'
 alias migafm='    mig APP=fm'
 alias migafml='   migafm && adb logcat | grep "FM Radio"'
 alias migaftu='    mig APP=ftu'
-alias migaftul='   migafm && adb logcat | grep FTU'
+alias migaftul='   migaftu && adb logcat | grep FTU'
 alias migagal='   mig APP=gallery'
 alias migagall='  migagal && adb logcat | grep Gallery'
 alias migahom='   mig APP=homescreen'
@@ -126,3 +127,12 @@ alias migawal='   mig APP=wallpaper'
 alias migawall='  migawal && adb logcat | grep wallpaper.gaia'
 alias tryall='    git push-to-try -t ../hg-mozilla-central -b do -p all -u all -t none'
 alias try='       git push-to-try -t ../hg-mozilla-central -b o -p linux64_gecko -u gaia-build,gaia-build-unit,gaia-unit,gaia-ui-test,gaia-integration,gaia-js-integration -t none'
+
+# Robots
+# Clear Bonjour cache.
+alias hirobot='sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.discoveryd.plist && sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.discoveryd.plist && ssh pi@hiro.local'
+
+# VR
+alias horizon='/Users/kevin/workspace/gecko-projects/obj-mozvrbundle/dist/Horizon.app/Contents/MacOS/graphene --start-manifest http://localhost:8000/manifest.webapp'
+
+alias horizonbundled='~/Downloads/Horizon.app/Contents/MacOS/graphene --start-manifest http://localhost:8000/manifest.webapp'
