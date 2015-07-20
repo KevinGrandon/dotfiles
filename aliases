@@ -72,11 +72,12 @@ alias gaia="      cd ~/workspace/gaia"
 alias gaiaff="    ~/Desktop/mulet.app/Contents/MacOS/firefox -profile ~/workspace/gaia/profile-debug"
 alias gutest='    ./bin/gaia-test -d'
 gitest() {
-	TEST_FILES="$1" ./bin/gaia-marionette
+	TEST_FILES="$1" make test-integration-test
 }
 gitestv() {
-	TEST_FILES="$1" ./bin/gaia-marionette --verbose
+	TEST_FILES="$1" make test-integration-test --verbose
 }
+
 alias al="        adb logcat"
 alias ala="       adb logcat | ag -i "
 alias ab2g="      adb shell stop b2g && adb shell start b2g"
@@ -133,6 +134,6 @@ alias try='       git push-to-try -t ../hg-mozilla-central -b o -p linux64_gecko
 alias hirobot='sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.discoveryd.plist && sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.discoveryd.plist && ssh pi@hiro.local'
 
 # VR
-alias horizon='/Users/kevin/workspace/gecko-projects/obj-mozvrbundle/dist/Horizon.app/Contents/MacOS/graphene --start-manifest http://localhost:8000/manifest.webapp'
+alias horizon='/Users/kevin/workspace/gecko-projects/obj-mozvrbundle/dist/Horizon.app/Contents/MacOS/horizon --start-manifest http://localhost:8000/manifest.webapp'
 
 alias horizonbundled='~/Downloads/Horizon.app/Contents/MacOS/graphene --start-manifest http://localhost:8000/manifest.webapp'
