@@ -3,8 +3,8 @@ alias g='         git '
 alias ga='        git add '
 alias gb='        git branch '
 alias gba='       git branch -a'
-alias gbd='       git branch -d '
-alias gbD='       git branch -D '
+alias gbd='       git branch -d'
+alias gbD='       git branch -D'
 alias gc='        git commit -a -m '
 alias gca='       git commit -a'
 alias gcad='      git commit -a --amend'
@@ -48,7 +48,7 @@ alias gw='        git show '
 
 # Programs
 alias am='        ~/workspace/dotfiles/atom'
-alias sub='       /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
+alias sub='       /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias subaliases='sub ~/workspace/dotfiles/aliases'
 
 # Linux Helpers
@@ -75,7 +75,7 @@ gitest() {
 	TEST_FILES="$1" make test-integration-test
 }
 gitestv() {
-	TEST_FILES="$1" make test-integration-test --verbose
+	VERBOSE=1 TEST_FILES="$1" make test-integration-test
 }
 
 alias al="        adb logcat"
@@ -110,6 +110,8 @@ alias migakey='   mig APP=keyboard'
 alias migakeyl='  migakey && adb logcat | grep keyboard.gaia'
 alias migamus='   mig APP=music'
 alias migamusl='  migamus && adb logcat | grep music.gaia'
+alias migarin='   mig APP=ringtones'
+alias migarinl='  migarin && adb logcat | grep ringtones.gaia'
 alias migasys='   mig APP=system'
 alias migasysl='  migasys && adb logcat | grep GeckoConsole'
 alias migasea='   mig APP=search'
