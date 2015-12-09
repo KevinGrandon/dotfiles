@@ -68,7 +68,7 @@ alias spoofmac="sudo ifconfig en0 ether $(openssl rand -hex 6 | sed 's/\(..\)/\1
 
 # Mozilla Aliases
 alias browserhtml="/Users/kevin/workspace/gecko-dev/obj-b2gdesktop/dist/B2G.app/Contents/MacOS/b2g --start-manifest http://localhost:8000/manifest.webapp"
-alias gaia="      cd ~/workspace/gaia"
+alias gaia="      cd ~/workspace/mozilla/gaia"
 alias gaiaff="    ~/Desktop/mulet.app/Contents/MacOS/firefox -profile ~/workspace/gaia/profile-debug"
 alias gutest='    ./bin/gaia-test -d'
 gitest() {
