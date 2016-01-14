@@ -54,7 +54,7 @@ alias ad='        arc diff '
 alias al='        arc land '
 
 # Programs
-alias sub='       /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+alias sub='       subl'
 alias subaliases='sub ~/workspace/dotfiles/aliases'
 
 # Linux Helpers
@@ -84,7 +84,7 @@ gitestv() {
 	VERBOSE=1 TEST_FILES="$1" make test-integration-test
 }
 
-alias al="        adb logcat"
+alias acat="      adb logcat"
 alias ala="       adb logcat | ag -i "
 alias ab2g="      adb shell stop b2g && adb shell start b2g"
 alias mig='       make install-gaia '
