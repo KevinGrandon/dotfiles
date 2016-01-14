@@ -48,6 +48,11 @@ alias gs='        git status '
 alias gt='        git checkout '
 alias gw='        git show '
 
+# Arc aliases
+alias ab='        arc branch '
+alias ad='        arc diff '
+alias al='        arc land '
+
 # Programs
 alias sub='       /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias subaliases='sub ~/workspace/dotfiles/aliases'
