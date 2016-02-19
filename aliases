@@ -49,9 +49,9 @@ alias gt='        git checkout '
 alias gw='        git show '
 
 # Arc aliases
-alias ab='        arc branch '
-alias ad='        arc diff '
-alias al='        arc land '
+alias arcb='        arc branch '
+alias arcd='        arc diff '
+alias arcl='        arc land '
 
 # Programs
 alias sub='       subl'
