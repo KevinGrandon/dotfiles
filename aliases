@@ -70,12 +70,3 @@ alias o='         open '
 alias o.='        open .'
 alias p='         pwd'
 alias spoofmac="sudo ifconfig en0 ether $(openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//') && ifconfig en0 | grep ether"
-
-# Robots
-# Clear Bonjour cache.
-alias hirobot='sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.discoveryd.plist && sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.discoveryd.plist && ssh pi@hiro.local'
-
-# Mozilla VR
-alias horizon='/Users/kevin/workspace/gecko-projects/obj-mozvrbundle/dist/Horizon.app/Contents/MacOS/horizon --start-manifest http://localhost:8000/manifest.webapp'
-
-alias horizonbundled='~/Downloads/Horizon.app/Contents/MacOS/graphene --start-manifest http://localhost:8000/manifest.webapp'
