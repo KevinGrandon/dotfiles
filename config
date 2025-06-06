@@ -1,5 +1,5 @@
 # Configuration
 git config --global push.default current
 git config --global user.name "Kevin Grandon"
-git config --global user.email "kevingrandon@yahoo.com"
+git config --global user.email "kevin@grandon.org"
 git config --global core.editor "code --wait"
