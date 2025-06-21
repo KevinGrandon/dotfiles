@@ -54,6 +54,7 @@ alias arcd='        arc diff '
 alias arcl='        arc land '
 
 # Programs
+alias c='         cursor'
 alias sub='       subl'
 alias subaliases='sub ~/workspace/dotfiles/aliases'
 
