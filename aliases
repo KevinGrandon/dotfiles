@@ -13,7 +13,13 @@ alias gct='       git commit'
 alias gd='        git diff'
 alias gdc='       git diff --cached'
 alias ge='        git clone '
-alias gg='        git log --follow'
+function gg() {
+    if [ $# -eq 0 ]; then
+        git log --oneline --graph --decorate
+    else
+        git log --oneline --graph --decorate --follow "$@"
+    fi
+}
 alias go='        git checkout '
 alias gob='       git checkout -b '
 alias gom='       git checkout $(git_main_branch)'
@@ -59,7 +65,7 @@ alias sub='       subl'
 alias subaliases='sub ~/workspace/dotfiles/aliases'
 
 # Linux Helpers
-alias .bp='       . ~/.bash_profile && echo "Aliases updated."'
+alias .z='       source ~/.zshrc && echo "Aliases updated."'
 alias ..='        cd ../'
 alias ...='       cd ../../'
 alias ....='      cd ../../../'
