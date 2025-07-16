@@ -17,7 +17,7 @@ function gg() {
     if [ $# -eq 0 ]; then
         git log --oneline --graph --decorate
     else
-        git log --oneline --graph --decorate --follow "$@"
+        git log --follow "$@"
     fi
 }
 alias go='        git checkout '
