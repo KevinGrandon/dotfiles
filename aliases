@@ -29,12 +29,12 @@ alias glo='       git pull origin '
 alias glom='      git pull origin $(git_main_branch)'
 alias glu='       git pull upstream '
 alias glum='      git pull upstream $(git_main_branch)'
-alias gh='        git push '
-alias ghf='       git push -f '
-alias gho='       git push origin '
-alias ghu='       git push upstream '
-alias ghof='      git push origin -f '
-alias ghom='      git push origin $(git_main_branch)'
+alias gu='        git push '
+alias guf='       git push -f '
+alias guo='       git push origin '
+alias guu='       git push upstream '
+alias guof='      git push origin -f '
+alias guom='      git push origin $(git_main_branch)'
 alias gr='        git rebase '
 alias grc='       git rebase --continue '
 alias gri='       git rebase -i '
@@ -79,5 +79,5 @@ alias p='         pwd'
 alias spoofmac="sudo ifconfig en0 ether $(openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//') && ifconfig en0 | grep ether"
 
 function git_main_branch() {
-    git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4
+    git remote show origin | grep 'HEAD branch' | cut -d' ' -f5
 }
