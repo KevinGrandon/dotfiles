@@ -1,0 +1,37 @@
+# Completion system
+# zsh's Tab completion only works once compinit has run. We initialize it here
+# (early, since `index` is sourced at the top of ~/.zshrc) so command-specific
+# completions sourced later — bun (#compdef bun), gcloud — register correctly.
+
+autoload -Uz compinit
+# Fast startup: only do the full security check if the cached dump is >24h old.
+if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qNmh+24) ]]; then
+  compinit
+else
+  compinit -C
+fi
+
+# --- Behavior -----------------------------------------------------------------
+setopt COMPLETE_IN_WORD   # complete from where the cursor is, not just end of word
+setopt ALWAYS_TO_END      # after completing, move the cursor to the end
+# AUTO_MENU (on by default) + the `menu select` zstyle below give the highlighted,
+# arrow-key navigable menu you "tab through".
+
+# --- Styling ------------------------------------------------------------------
+# Highlighted menu you can move through with Tab / arrow keys.
+zstyle ':completion:*' menu select
+
+# Case-insensitive, then partial-word, matching:
+#   ls doc<Tab>  -> Documents
+#   cd ws/ag<Tab> -> workspace/agent
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+
+# Color the completion listing the same way `ls` colors files/dirs.
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+# Group results and label each group (commands, directories, options, ...).
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*:descriptions' format '%F{yellow}%d%f'
+
+# Offer ./ and ../ where it makes sense.
+zstyle ':completion:*' special-dirs true
