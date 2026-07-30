@@ -14,6 +14,13 @@ fi
 # --- Behavior -----------------------------------------------------------------
 setopt COMPLETE_IN_WORD   # complete from where the cursor is, not just end of word
 setopt ALWAYS_TO_END      # after completing, move the cursor to the end
+
+# Fall back to file/directory completion when a command's own completion offers
+# nothing. Without this, `bun import <Tab>` (and any `bun <script> <args>`) shows
+# nothing: bun's completion knows script *names* but not a script's *arguments*,
+# so Tab can't browse directories. `_files` only runs when `_complete` produced
+# no matches, so command-specific completions (git, cd, …) are unaffected.
+zstyle ':completion:*' completer _complete _files
 # AUTO_MENU (on by default) + the `menu select` zstyle below give the highlighted,
 # arrow-key navigable menu you "tab through".
 
